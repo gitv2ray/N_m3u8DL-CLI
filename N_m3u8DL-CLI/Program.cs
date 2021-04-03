@@ -109,12 +109,7 @@ namespace N_m3u8DL_CLI.NetCore
                 Global.WriteInit();
                 if (!File.Exists(Path.Combine(Path.GetDirectoryName(Process.GetCurrentProcess().MainModule.FileName), "NO_UPDATE"))) 
                 {
-                    Thread checkUpdate = new Thread(() =>
-                    {
-                        Global.CheckUpdate();
-                    });
-                    checkUpdate.IsBackground = true;
-                    checkUpdate.Start();
+ 
                 }
 
                 int maxThreads = Environment.ProcessorCount;
