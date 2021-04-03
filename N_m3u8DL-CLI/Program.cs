@@ -386,7 +386,7 @@ namespace N_m3u8DL_CLI.NetCore
                     parser.BaseUrl = baseUrl;
                 parser.Headers = reqHeaders;
                 //string exePath = Path.GetDirectoryName(Process.GetCurrentProcess().MainModule.FileName);
-                string exePath = "w:\m3u8";
+                string exePath = @"w:\m3u8";
                 LOGGER.LOGFILE = Path.Combine(exePath, "Logs", DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss-fff") + ".log");
                 LOGGER.InitLog();
                 LOGGER.WriteLine(strings.startParsing + testurl);
